@@ -13,6 +13,7 @@ Este conversor utiliza la API de CoinGecko para obtener tasas de cambio en tiemp
 ✅ Generación de archivos JSON con los resultados de conversión
 
 🚀 Cómo Usarlo
+
 1. Requisitos
 
 Java JDK 17 o superior
@@ -26,8 +27,8 @@ Conexión a Internet (para consultar la API de CoinGecko)
 Clona el repositorio o descarga los archivos:
 
 bash
-git clone https://github.com/tu-usuario/crypto-converter.git
-cd crypto-converter
+git clone https://github.com/tu-usuario/ConversorCripto.git
+cd ConversorCripto
 3. Compilación y Ejecución
 Con Maven:
 bash
@@ -38,6 +39,7 @@ bash
 javac -cp ".;gson-2.10.1.jar" src/*.java -d out/
 java -cp "out;gson-2.10.1.jar" Principal
 📋 Métodos Principales
+
 1. ConsultaMoneda.java
 
 Clase encargada de interactuar con la API de CoinGecko.
