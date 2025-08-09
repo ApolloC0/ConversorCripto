@@ -2,9 +2,13 @@ Conversor de Criptomonedas
 Un conversor de monedas y criptomonedas que utiliza la API de CoinGecko para obtener tasas de cambio en tiempo real.
 
 📌 Características
+
 ✅ Conversión entre criptomonedas y monedas FIAT (BTC, ETH, LTC, SOL, USDT, USD, EUR, MXN, etc.)
+
 ✅ Consulta de precios actualizados en USD
+
 ✅ Manejo de errores para entradas inválidas
+
 ✅ Generación de archivos JSON con los resultados de conversión
 
 🚀 Cómo Usarlo
