@@ -42,7 +42,7 @@ javac -cp ".;gson-2.10.1.jar" src/*.java -d out/
 java -cp "out;gson-2.10.1.jar" Principal
 📋 Métodos Principales
 
-1. ConsultaMoneda.java
+-. ConsultaMoneda.java
 
 Clase encargada de interactuar con la API de CoinGecko.
 
@@ -61,7 +61,7 @@ getCoinGeckoId(String symbol)
 
 Mapea símbolos (BTC, ETH) a los IDs de CoinGecko (bitcoin, ethereum).
 
-2. Principal.java
+-. Principal.java
 
 Interfaz de línea de comandos (CLI) para el usuario.
 
@@ -77,7 +77,7 @@ Ejemplo: 10 LTC → USDT
 
 Salir del programa
 
-3. Moneda.java (Record)
+-. Moneda.java (Record)
 Almacena los datos de la conversión:
 
 java
@@ -90,7 +90,7 @@ public record Moneda(
     double convertedAmount
 ) {}
 
-4. GeneradorDeArchivo.java
+-. GeneradorDeArchivo.java
 Guarda los resultados en un archivo JSON.
 
 Ejemplo: BTC_a_USD_20231006_1425.json
