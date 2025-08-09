@@ -40,6 +40,8 @@ Sin Maven (compilación manual):
 bash
 javac -cp ".;gson-2.10.1.jar" src/*.java -d out/
 java -cp "out;gson-2.10.1.jar" Principal
+
+
 📋 Métodos Principales
 
 -. ConsultaMoneda.java
