@@ -13,6 +13,7 @@ Un conversor de monedas y criptomonedas que utiliza la API de CoinGecko para obt
 
 🚀 Cómo Usarlo
 1. Requisitos
+
 Java JDK 17 o superior
 
 Maven (para gestión de dependencias)
@@ -20,6 +21,7 @@ Maven (para gestión de dependencias)
 Conexión a Internet (para consultar la API de CoinGecko)
 
 2. Instalación
+
 Clona el repositorio o descarga los archivos:
 
 bash
@@ -36,6 +38,7 @@ javac -cp ".;gson-2.10.1.jar" src/*.java -d out/
 java -cp "out;gson-2.10.1.jar" Principal
 📋 Métodos Principales
 1. ConsultaMoneda.java
+
 Clase encargada de interactuar con la API de CoinGecko.
 
 Métodos clave:
@@ -54,9 +57,11 @@ getCoinGeckoId(String symbol)
 Mapea símbolos (BTC, ETH) a los IDs de CoinGecko (bitcoin, ethereum).
 
 2. Principal.java
+
 Interfaz de línea de comandos (CLI) para el usuario.
 
 Opciones del menú:
+
 Ver precio de una criptomoneda en USD
 
 Ejemplo: 1 BTC = 50,000 USD
@@ -71,6 +76,7 @@ Salir del programa
 Almacena los datos de la conversión:
 
 java
+
 public record Moneda(
     String fromCurrency,
     String toCurrency,
@@ -78,6 +84,7 @@ public record Moneda(
     double conversionRate,
     double convertedAmount
 ) {}
+
 4. GeneradorDeArchivo.java
 Guarda los resultados en un archivo JSON.
 
@@ -88,11 +95,17 @@ El proyecto usa la API gratuita de CoinGecko:
 🔗 https://www.coingecko.com/en/api
 
 Endpoints usados:
+
 /simple/price
 
 Ejemplo: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
 
-Devuelve:
+⚠️ Posibles Errores y Soluciones
 
-json
-{ "bitcoin": { "usd": 50000.00 } }
+"Moneda no soportada": Verifica que el símbolo esté en la lista (BTC, ETH, USDT, USD, etc.).
+
+"Error API: Too many requests": CoinGecko tiene un límite de solicitudes (50/min en el plan gratuito).
+
+"Error en la conversión": Algunas monedas requieren conversión indirecta (ej: LTC → USDT se hace vía USD).
+
+Nota adicional: la API de Coingecko fue preferida para este proyecto ya que no requiere del uso de una API key específica, facilitando el futuro mantenimiento e implementación de nuevas caracteristicas.
