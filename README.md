@@ -1,5 +1,6 @@
 Conversor de Criptomonedas
-Un conversor de monedas y criptomonedas que utiliza la API de CoinGecko para obtener tasas de cambio en tiempo real.
+
+Este conversor utiliza la API de CoinGecko para obtener tasas de cambio en tiempo real.
 
 📌 Características
 
